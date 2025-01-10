@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Courses - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/student-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quiz.html">My Quizzes</a></li>
+          <li><a href="./progress.html">Progress</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <main class="student-dashboard">
+      <!-- Courses Section -->
+      <section class="courses-section">
+        <h2>My Enrolled Courses</h2>
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-progress">
+              <div class="progress-bar">
+                <div style="width: 75%"></div>
+              </div>
+              <span>75% Complete</span>
+            </div>
+            <h3>Web Development Basics</h3>
+            <p>Learn HTML, CSS, and JavaScript fundamentals</p>
+            <div class="course-meta">
+              <span>12 Modules</span>
+              <span>•</span>
+              <span>24 Hours</span>
+            </div>
+            <a href="./course.html" class="primary-btn">Continue Course</a>
+          </div>
+
+          <div class="course-card">
+            <div class="course-progress">
+              <div class="progress-bar">
+                <div style="width: 30%"></div>
+              </div>
+              <span>30% Complete</span>
+            </div>
+            <h3>Data Science Fundamentals</h3>
+            <p>Introduction to data analysis and visualization</p>
+            <div class="course-meta">
+              <span>8 Modules</span>
+              <span>•</span>
+              <span>16 Hours</span>
+            </div>
+            <a href="./course.html" class="primary-btn">Continue Course</a>
+          </div>
+
+          <div class="course-card">
+            <div class="course-progress">
+              <div class="progress-bar">
+                <div style="width: 0%"></div>
+              </div>
+              <span>Not Started</span>
+            </div>
+            <h3>Python Programming</h3>
+            <p>Master Python programming from scratch</p>
+            <div class="course-meta">
+              <span>10 Modules</span>
+              <span>•</span>
+              <span>20 Hours</span>
+            </div>
+            <a href="./course.html" class="primary-btn">Start Course</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Available Courses Section -->
+      <section class="available-courses">
+        <h2>Available Courses</h2>
+        <div class="courses-grid">
+          <div class="course-card">
+            <span class="course-badge">Popular</span>
+            <h3>Mobile App Development</h3>
+            <p>Learn to build iOS and Android applications</p>
+            <div class="course-meta">
+              <span>15 Modules</span>
+              <span>•</span>
+              <span>30 Hours</span>
+            </div>
+            <a href="#enroll" class="secondary-btn">Enroll Now</a>
+          </div>
+
+          <div class="course-card">
+            <span class="course-badge">New</span>
+            <h3>AI & Machine Learning</h3>
+            <p>Introduction to artificial intelligence</p>
+            <div class="course-meta">
+              <span>12 Modules</span>
+              <span>•</span>
+              <span>25 Hours</span>
+            </div>
+            <a href="#enroll" class="secondary-btn">Enroll Now</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

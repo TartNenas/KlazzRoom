@@ -278,3 +278,48 @@ section h2::before {
 .stat-card:nth-child(3) {
   animation-delay: 0.4s;
 }
+
+/* Course Badge */
+.course-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.course-badge:empty {
+  display: none;
+}
+
+.course-badge:contains("Popular") {
+  background: var(--primary);
+  color: white;
+}
+
+.course-badge:contains("New") {
+  background: var(--success);
+  color: white;
+}
+
+/* Course Meta */
+.course-meta {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin: 1rem 0;
+}
+
+/* Available Courses Section */
+.available-courses {
+  margin-top: 4rem;
+}
+
+.secondary-btn {
+  width: 100%;
+  text-align: center;
+}
