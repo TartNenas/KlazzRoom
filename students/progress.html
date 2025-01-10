@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Progress - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/student-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quiz.html">My Quizzes</a></li>
+          <li><a href="./progress.html">Progress</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <main class="student-dashboard">
+      <!-- Overall Progress Section -->
+      <section class="overall-progress">
+        <h2>Learning Progress</h2>
+        <div class="progress-overview">
+          <div class="progress-card">
+            <div class="circular-progress" data-progress="75">
+              <span class="progress-value">75%</span>
+            </div>
+            <h3>Overall Completion</h3>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <h3>3</h3>
+              <p>Courses in Progress</p>
+            </div>
+            <div class="stat-card">
+              <h3>15</h3>
+              <p>Quizzes Completed</p>
+            </div>
+            <div class="stat-card">
+              <h3>89%</h3>
+              <p>Average Score</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Course Progress Section -->
+      <section class="course-progress-section">
+        <h2>Course Progress</h2>
+        <div class="progress-list">
+          <div class="progress-item">
+            <div class="progress-info">
+              <h3>Web Development Basics</h3>
+              <span class="progress-percentage">75% Complete</span>
+            </div>
+            <div class="progress-bar">
+              <div style="width: 75%"></div>
+            </div>
+            <div class="progress-details">
+              <span>9/12 Modules</span>
+              <span>18/24 Hours</span>
+            </div>
+          </div>
+
+          <div class="progress-item">
+            <div class="progress-info">
+              <h3>Data Science Fundamentals</h3>
+              <span class="progress-percentage">30% Complete</span>
+            </div>
+            <div class="progress-bar">
+              <div style="width: 30%"></div>
+            </div>
+            <div class="progress-details">
+              <span>3/8 Modules</span>
+              <span>6/16 Hours</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recent Activity Section -->
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <span class="activity-icon">📝</span>
+            <div class="activity-content">
+              <h4>Completed Quiz: JavaScript Basics</h4>
+              <p>Score: 90% • Yesterday</p>
+            </div>
+          </div>
+          <div class="activity-item">
+            <span class="activity-icon">📚</span>
+            <div class="activity-content">
+              <h4>Completed Module: CSS Layout</h4>
+              <p>Web Development Basics • 2 days ago</p>
+            </div>
+          </div>
+          <div class="activity-item">
+            <span class="activity-icon">🏆</span>
+            <div class="activity-content">
+              <h4>Achievement Unlocked: CSS Master</h4>
+              <p>Completed all CSS modules • 3 days ago</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

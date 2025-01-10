@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Profile - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/student-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quiz.html">My Quizzes</a></li>
+          <li><a href="./progress.html">Progress</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <main class="student-dashboard">
+      <!-- Profile Header -->
+      <section class="profile-header">
+        <div class="profile-info">
+          <div class="profile-avatar">
+            <img
+              src="../Assets/images/avatar-placeholder.png"
+              alt="Profile Picture"
+            />
+            <button class="edit-avatar">Edit</button>
+          </div>
+          <div class="profile-details">
+            <h1>John Doe</h1>
+            <p>Student ID: ST12345</p>
+            <div class="profile-stats">
+              <span>Joined: Jan 2024</span>
+              <span>•</span>
+              <span>3 Active Courses</span>
+              <span>•</span>
+              <span>Level: Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile Settings -->
+      <section class="profile-settings">
+        <h2>Profile Settings</h2>
+        <form class="settings-form">
+          <div class="form-group">
+            <label for="fullName">Full Name</label>
+            <input type="text" id="fullName" value="John Doe" />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" value="john.doe@example.com" />
+          </div>
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" value="+1 234 567 890" />
+          </div>
+          <div class="form-group">
+            <label for="bio">Bio</label>
+            <textarea id="bio" rows="4">
+Passionate learner interested in web development and data science.</textarea
+            >
+          </div>
+          <button type="submit" class="primary-btn">Save Changes</button>
+        </form>
+      </section>
+
+      <!-- Achievements Section -->
+      <section class="achievements-section">
+        <h2>Achievements</h2>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <span class="achievement-icon">🏆</span>
+            <h3>Quick Learner</h3>
+            <p>Completed 5 courses in 30 days</p>
+          </div>
+          <div class="achievement-card">
+            <span class="achievement-icon">⭐</span>
+            <h3>Perfect Score</h3>
+            <p>Achieved 100% in 3 quizzes</p>
+          </div>
+          <div class="achievement-card">
+            <span class="achievement-icon">🎯</span>
+            <h3>Consistent</h3>
+            <p>30-day learning streak</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Preferences Section -->
+      <section class="preferences-section">
+        <h2>Preferences</h2>
+        <div class="preferences-form">
+          <div class="preference-group">
+            <label class="switch-label">
+              Email Notifications
+              <input type="checkbox" checked />
+              <span class="switch"></span>
+            </label>
+          </div>
+          <div class="preference-group">
+            <label class="switch-label">
+              Quiz Reminders
+              <input type="checkbox" checked />
+              <span class="switch"></span>
+            </label>
+          </div>
+          <div class="preference-group">
+            <label class="switch-label">
+              Course Updates
+              <input type="checkbox" checked />
+              <span class="switch"></span>
+            </label>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

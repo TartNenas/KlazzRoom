@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lecturer Dashboard - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/lecturer-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quizzes.html">Quizzes</a></li>
+          <li><a href="./students.html">Students</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <main class="lecturer-dashboard">
+      <!-- Hero Header Section -->
+      <section class="welcome-section">
+        <div class="welcome-content">
+          <h1>Welcome Back, Dr. Smith</h1>
+          <p>Manage your courses, create quizzes, and track student progress</p>
+        </div>
+        <div class="quick-stats">
+          <div class="stat-card">
+            <h3>450</h3>
+            <p>Active Students</p>
+          </div>
+          <div class="stat-card">
+            <h3>8</h3>
+            <p>Active Courses</p>
+          </div>
+          <div class="stat-card">
+            <h3>25</h3>
+            <p>Quizzes Created</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features List Section -->
+      <section class="features-section">
+        <h2>Quick Actions</h2>
+        <div class="features-grid">
+          <a href="./courses/create.html" class="feature-card">
+            <span class="feature-icon">📚</span>
+            <h3>Create New Course</h3>
+            <p>Design and publish a new course module</p>
+          </a>
+          <a href="./quizzes/create.html" class="feature-card">
+            <span class="feature-icon">📝</span>
+            <h3>Create Quiz</h3>
+            <p>Add new assessments for your students</p>
+          </a>
+          <a href="./students/grades.html" class="feature-card">
+            <span class="feature-icon">📊</span>
+            <h3>Grade Submissions</h3>
+            <p>Review and grade student submissions</p>
+          </a>
+          <a href="./analytics.html" class="feature-card">
+            <span class="feature-icon">📈</span>
+            <h3>View Analytics</h3>
+            <p>Track student performance and engagement</p>
+          </a>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="recent-activity">
+        <h2>Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <span class="activity-icon">📝</span>
+            <div class="activity-content">
+              <h4>New Quiz Submissions</h4>
+              <p>15 students completed JavaScript Basics Quiz</p>
+              <span class="activity-time">2 hours ago</span>
+            </div>
+            <a href="#review" class="action-btn">Review</a>
+          </div>
+          <div class="activity-item">
+            <span class="activity-icon">❓</span>
+            <div class="activity-content">
+              <h4>Student Questions</h4>
+              <p>3 new questions in Web Development course</p>
+              <span class="activity-time">5 hours ago</span>
+            </div>
+            <a href="#answer" class="action-btn">Answer</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="course-overview">
+        <h2>Active Courses</h2>
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-header">
+              <h3>Web Development Basics</h3>
+              <span class="student-count">125 Students</span>
+            </div>
+            <div class="course-stats">
+              <div class="stat">
+                <span>Average Score</span>
+                <strong>85%</strong>
+              </div>
+              <div class="stat">
+                <span>Completion Rate</span>
+                <strong>78%</strong>
+              </div>
+            </div>
+            <a href="./courses/details.html" class="view-details"
+              >View Details</a
+            >
+          </div>
+
+          <div class="course-card">
+            <div class="course-header">
+              <h3>Data Science Fundamentals</h3>
+              <span class="student-count">98 Students</span>
+            </div>
+            <div class="course-stats">
+              <div class="stat">
+                <span>Average Score</span>
+                <strong>79%</strong>
+              </div>
+              <div class="stat">
+                <span>Completion Rate</span>
+                <strong>65%</strong>
+              </div>
+            </div>
+            <a href="./courses/details.html" class="view-details"
+              >View Details</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="quick-links">
+            <a href="#help">Help Center</a>
+            <a href="#resources">Teaching Resources</a>
+            <a href="#support">Technical Support</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
