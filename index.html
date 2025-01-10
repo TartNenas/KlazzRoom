@@ -1,11 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main Page</title>
-</head>
-<body>
-    <h1>KlazzRoom</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EduPlus - Learn Smart</title>
+    <link rel="stylesheet" href="assets/css/styles.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#quizzes">Quizzes</a></li>
+          <li><a href="#leaderboard">Leaderboard</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#profile">Profile</a></li>
+        </ul>
+      </nav>
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Welcome Section -->
+      <section class="welcome">
+        <h2>Welcome, <span id="userName">John</span>!</h2>
+        <p>
+          Enhance your learning journey with personalized courses and
+          interactive quizzes.
+        </p>
+      </section>
+
+      <!-- Highlights Section -->
+      <section class="highlights">
+        <div class="highlight-card quizzes">
+          <h3>Quick Quizzes</h3>
+          <p>Test your knowledge with our interactive quizzes</p>
+          <button>Start Quiz</button>
+        </div>
+
+        <div class="highlight-card leaderboard">
+          <h3>Leaderboard</h3>
+          <div class="quick-stats">
+            <p>Your Rank: #42</p>
+            <p>Points: 1,250</p>
+          </div>
+          <a href="#leaderboard">View Full Rankings</a>
+        </div>
+
+        <div class="highlight-card featured-courses">
+          <h3>Featured Courses</h3>
+          <div class="course-list">
+            <div class="course">
+              <h4>Web Development Basics</h4>
+              <p>Learn HTML, CSS, and JavaScript fundamentals</p>
+            </div>
+            <div class="course">
+              <h4>Data Science 101</h4>
+              <p>Introduction to data analysis and visualization</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Call-to-Action Section -->
+      <section class="cta">
+        <button class="primary-btn">Start Learning</button>
+        <button class="secondary-btn">View All Features</button>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="quick-links">
+        <a href="#faq">FAQ</a>
+        <a href="#contact">Contact Us</a>
+        <a href="#privacy">Privacy Policy</a>
+      </div>
+      <div class="social-icons">
+        <a href="#" class="social-icon">📘</a>
+        <a href="#" class="social-icon">🐦</a>
+        <a href="#" class="social-icon">📸</a>
+      </div>
+    </footer>
+  </body>
 </html>
