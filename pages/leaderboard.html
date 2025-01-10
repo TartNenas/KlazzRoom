@@ -4,8 +4,106 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EduPlus - University Leaderboard</title>
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/leaderboard-styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="leaderboard-styles.css" />
   </head>
-  <!-- Rest of the leaderboard.html remains the same -->
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+      <h2 class="page-title">University Leaderboard</h2>
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="leaderboard-container">
+      <!-- Filters Section -->
+      <section class="filters">
+        <div class="search-bar">
+          <input type="text" placeholder="Search universities or students..." />
+          <button>🔍</button>
+        </div>
+        <div class="filter-options">
+          <select name="course" id="course-filter">
+            <option value="all">All Courses</option>
+            <option value="python">Python Basics</option>
+            <option value="web">Web Development</option>
+          </select>
+          <select name="period" id="time-filter">
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+            <option value="all">All Time</option>
+          </select>
+        </div>
+      </section>
+
+      <!-- Rankings Section -->
+      <section class="rankings">
+        <!-- Top 3 Universities -->
+        <div class="top-universities">
+          <div class="university-card gold">
+            <span class="rank">1</span>
+            <h3>MIT</h3>
+            <p class="score">98,750 pts</p>
+            <span class="trend up">↑ 2</span>
+          </div>
+          <div class="university-card silver">
+            <span class="rank">2</span>
+            <h3>Stanford</h3>
+            <p class="score">95,200 pts</p>
+            <span class="trend down">↓ 1</span>
+          </div>
+          <div class="university-card bronze">
+            <span class="rank">3</span>
+            <h3>Harvard</h3>
+            <p class="score">92,800 pts</p>
+            <span class="trend up">↑ 1</span>
+          </div>
+        </div>
+
+        <!-- Remaining Rankings -->
+        <div class="rankings-list">
+          <!-- Example of an expanded row -->
+          <div class="university-row expanded">
+            <div class="main-info">
+              <span class="rank">4</span>
+              <h3>Cambridge University</h3>
+              <p class="score">90,150 pts</p>
+              <button class="expand-btn">▼</button>
+            </div>
+            <div class="student-contributors">
+              <div class="student">
+                <span class="student-rank">1.</span>
+                <span class="student-name">John Smith</span>
+                <span class="student-score">15,200 pts</span>
+              </div>
+              <div class="student">
+                <span class="student-rank">2.</span>
+                <span class="student-name">Emma Wilson</span>
+                <span class="student-score">14,800 pts</span>
+              </div>
+            </div>
+          </div>
+          <!-- Additional university rows -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="quick-links">
+        <a href="index.html">Home</a>
+        <a href="#quizzes">Quizzes</a>
+        <a href="#profile">Profile</a>
+        <span class="separator">|</span>
+        <a href="#terms">Terms</a>
+        <a href="#privacy">Privacy</a>
+      </div>
+    </footer>
+  </body>
 </html>
