@@ -3,91 +3,155 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EduPlus - Learn Smart</title>
-    <link rel="stylesheet" href="Assets/css/styles.css" />
+    <title>Cloudify - Financial Management Made Simple</title>
+    <link rel="stylesheet" href="/Assets/css/styles.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- Navbar -->
     <header>
       <div class="logo">
-        <h1>EduPlus</h1>
+        <h1>Cloudify</h1>
       </div>
       <nav>
         <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#quizzes">Quizzes</a></li>
-          <li><a href="#leaderboard">Leaderboard</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#profile">Profile</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#benefits">Benefits</a></li>
+          <li><a href="#team">Team</a></li>
         </ul>
       </nav>
       <div class="user-actions">
-        <a href="#notifications" class="notification-icon">🔔</a>
-        <a href="#profile" class="profile-icon">👤</a>
+        <a href="#signup" class="primary-btn">Get Started</a>
       </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-      <!-- Welcome Section -->
-      <section class="welcome">
-        <h2>Welcome, <span id="userName">John</span>!</h2>
+      <!-- Hero Section -->
+      <section class="hero">
+        <h2>Simplify Your Financial Management</h2>
         <p>
-          Enhance your learning journey with personalized courses and
-          interactive quizzes.
+          Track, manage, and optimize your finances with our powerful
+          cloud-based solution
         </p>
+        <button class="primary-btn">Start Free Trial</button>
       </section>
 
-      <!-- Highlights Section -->
-      <section class="highlights">
-        <div class="highlight-card quizzes">
-          <h3>Quick Quizzes</h3>
-          <p>Test your knowledge with our interactive quizzes</p>
-          <button>Start Quiz</button>
-        </div>
-
-        <div class="highlight-card leaderboard">
-          <h3>Leaderboard</h3>
-          <div class="quick-stats">
-            <p>Your Rank: #42</p>
-            <p>Points: 1,250</p>
+      <!-- Features Section -->
+      <section class="features" id="features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Real-time Tracking</h3>
+            <p>Monitor your financial activities as they happen</p>
           </div>
-          <a href="#leaderboard">View Full Rankings</a>
-        </div>
-
-        <div class="highlight-card featured-courses">
-          <h3>Featured Courses</h3>
-          <div class="course-list">
-            <div class="course">
-              <h4>Web Development Basics</h4>
-              <p>Learn HTML, CSS, and JavaScript fundamentals</p>
-            </div>
-            <div class="course">
-              <h4>Data Science 101</h4>
-              <p>Introduction to data analysis and visualization</p>
-            </div>
+          <div class="feature-card">
+            <h3>App Integration</h3>
+            <p>Seamlessly connect with your favorite financial tools</p>
+          </div>
+          <div class="feature-card">
+            <h3>User-Friendly Interface</h3>
+            <p>Intuitive design for effortless financial management</p>
           </div>
         </div>
       </section>
 
-      <!-- Call-to-Action Section -->
+      <!-- How It Works Section -->
+      <section class="how-it-works" id="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step">
+            <span class="step-number">1</span>
+            <h3>Sign Up</h3>
+            <p>Create your account in minutes</p>
+          </div>
+          <div class="step">
+            <span class="step-number">2</span>
+            <h3>Connect</h3>
+            <p>Link your financial accounts</p>
+          </div>
+          <div class="step">
+            <span class="step-number">3</span>
+            <h3>Manage</h3>
+            <p>Start tracking and optimizing your finances</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="testimonials" id="testimonials">
+        <h2>What Our Users Say</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <p>"Cloudify transformed how I manage my business finances."</p>
+            <cite>- Sarah Johnson, Small Business Owner</cite>
+          </div>
+          <div class="testimonial-card">
+            <p>"The most user-friendly financial tool I've ever used."</p>
+            <cite>- Mark Chen, Freelancer</cite>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="benefits" id="benefits">
+        <h2>Why Choose Cloudify</h2>
+        <div class="benefits-grid">
+          <div class="benefit-card">
+            <h3>Easy to Use</h3>
+            <p>No financial expertise required</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Accessible</h3>
+            <p>Manage your finances from anywhere</p>
+          </div>
+          <div class="benefit-card">
+            <h3>Integration</h3>
+            <p>Works with your existing tools</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Team Section -->
+      <section class="team" id="team">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+          <div class="team-member">
+            <div class="member-photo"></div>
+            <h3>Alex Rivera</h3>
+            <p>CEO & Founder</p>
+          </div>
+          <div class="team-member">
+            <div class="member-photo"></div>
+            <h3>Emma Thompson</h3>
+            <p>Head of Product</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
       <section class="cta">
-        <button class="primary-btn">Start Learning</button>
-        <button class="secondary-btn">View All Features</button>
+        <h2>Ready to Get Started?</h2>
+        <p>
+          Join thousands of satisfied users managing their finances with
+          Cloudify
+        </p>
+        <button class="primary-btn">Start Free Trial</button>
       </section>
     </main>
 
-    <!-- Footer -->
     <footer>
-      <div class="quick-links">
-        <a href="#faq">FAQ</a>
-        <a href="#contact">Contact Us</a>
-        <a href="#privacy">Privacy Policy</a>
-      </div>
-      <div class="social-icons">
-        <a href="#" class="social-icon">📘</a>
-        <a href="#" class="social-icon">🐦</a>
-        <a href="#" class="social-icon">📸</a>
+      <div class="footer-content">
+        <div class="quick-links">
+          <a href="#privacy">Privacy Policy</a>
+          <a href="#terms">Terms of Service</a>
+          <a href="#contact">Contact Us</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" class="social-icon">LinkedIn</a>
+          <a href="#" class="social-icon">Twitter</a>
+          <a href="#" class="social-icon">Facebook</a>
+        </div>
       </div>
     </footer>
   </body>
