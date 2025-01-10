@@ -37,18 +37,18 @@
     </header>
 
     <main class="lecturer-dashboard">
-      <!-- Header Section -->
-      <section class="page-header">
-        <div class="header-content">
-          <h1>Create New Quiz</h1>
-          <p>Design assessments to evaluate student understanding</p>
-        </div>
-      </section>
-
       <!-- Quiz Creation Form -->
-      <section class="quiz-creation">
-        <!-- Quiz Header Section -->
-        <div class="form-section">
+      <section class="quiz-creation-form">
+        <!-- Header Section -->
+        <div class="page-header">
+          <div class="header-content">
+            <h1>Create New Quiz</h1>
+            <p>Design assessments to evaluate student understanding</p>
+          </div>
+        </div>
+
+        <!-- Quiz Details Section -->
+        <div class="quiz-section">
           <h2>Quiz Details</h2>
           <div class="form-group">
             <label for="quizTitle">Quiz Title</label>
@@ -58,14 +58,16 @@
               placeholder="e.g., JavaScript Fundamentals Quiz"
             />
           </div>
+
           <div class="form-group">
-            <label for="quizDescription">Description</label>
+            <label for="description">Description</label>
             <textarea
-              id="quizDescription"
+              id="description"
               rows="4"
               placeholder="Provide a brief overview of the quiz content..."
             ></textarea>
           </div>
+
           <div class="form-row">
             <div class="form-group">
               <label for="courseSelect">Associated Course</label>
@@ -83,18 +85,12 @@
         </div>
 
         <!-- Questions Section -->
-        <div class="form-section">
-          <div class="section-header">
-            <h2>Questions</h2>
-            <div class="question-type-selector">
-              <button class="type-btn active" data-type="multiple">
-                Multiple Choice
-              </button>
-              <button class="type-btn" data-type="true-false">
-                True/False
-              </button>
-              <button class="type-btn" data-type="short">Short Answer</button>
-            </div>
+        <div class="quiz-section">
+          <h2>Questions</h2>
+          <div class="question-type-selector">
+            <button class="type-btn active">Multiple Choice</button>
+            <button class="type-btn">True/False</button>
+            <button class="type-btn">Short Answer</button>
           </div>
 
           <div class="questions-list">
@@ -103,45 +99,50 @@
               <div class="question-header">
                 <span class="question-number">Question 1</span>
                 <div class="question-actions">
-                  <button class="icon-btn">📝</button>
-                  <button class="icon-btn">❌</button>
+                  <button class="action-btn">🔼</button>
+                  <button class="action-btn">🔽</button>
+                  <button class="action-btn">❌</button>
                 </div>
               </div>
+
               <div class="form-group">
                 <label>Question Text</label>
                 <textarea
-                  rows="2"
                   placeholder="Enter your question here..."
+                  rows="3"
                 ></textarea>
               </div>
+
               <div class="options-list">
                 <div class="option-item">
-                  <input type="radio" name="correct1" id="opt1" />
+                  <input type="radio" name="correct_1" />
                   <input type="text" placeholder="Option 1" />
-                  <button class="icon-btn">❌</button>
+                  <button class="remove-option">✕</button>
                 </div>
                 <div class="option-item">
-                  <input type="radio" name="correct1" id="opt2" />
+                  <input type="radio" name="correct_1" />
                   <input type="text" placeholder="Option 2" />
-                  <button class="icon-btn">❌</button>
+                  <button class="remove-option">✕</button>
                 </div>
-                <button class="add-option-btn">+ Add Option</button>
               </div>
+
+              <button class="add-option-btn">+ Add Option</button>
+
               <div class="form-group">
                 <label>Explanation (Optional)</label>
                 <textarea
-                  rows="2"
                   placeholder="Explain the correct answer..."
+                  rows="2"
                 ></textarea>
               </div>
             </div>
-
-            <button class="add-question-btn">+ Add New Question</button>
           </div>
+
+          <button class="add-question-btn">+ Add New Question</button>
         </div>
 
         <!-- Quiz Settings -->
-        <div class="form-section">
+        <div class="quiz-section">
           <h2>Quiz Settings</h2>
           <div class="settings-grid">
             <div class="form-group">
@@ -175,30 +176,10 @@
           </div>
         </div>
 
-        <!-- Testimonial Section -->
-        <div class="form-section testimonials">
-          <h2>Quiz Creation Tips</h2>
-          <div class="testimonials-grid">
-            <div class="testimonial-card">
-              <p>
-                "Clear and concise questions lead to better assessment results."
-              </p>
-              <cite>- Dr. Sarah Johnson, Education Expert</cite>
-            </div>
-            <div class="testimonial-card">
-              <p>
-                "Include a mix of question types to test different learning
-                aspects."
-              </p>
-              <cite>- Prof. Michael Chen, Course Director</cite>
-            </div>
-          </div>
-        </div>
-
         <!-- Form Actions -->
         <div class="form-actions">
-          <button class="secondary-btn">Save as Draft</button>
-          <button class="primary-btn">Publish Quiz</button>
+          <button type="button" class="secondary-btn">Save as Draft</button>
+          <button type="submit" class="primary-btn">Publish Quiz</button>
         </div>
       </section>
     </main>
