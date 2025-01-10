@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/student-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quizzes.html">My Quizzes</a></li>
+          <li><a href="./progress.html">Progress</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <main class="student-dashboard">
+      <!-- Services/Courses Section -->
+      <section class="services-section">
+        <h2>My Learning Path</h2>
+        <div class="courses-grid">
+          <div class="course-card">
+            <div class="course-progress">
+              <div class="progress-bar" style="width: 75%"></div>
+              <span>75% Complete</span>
+            </div>
+            <h3>Web Development Basics</h3>
+            <p>Continue your journey in HTML, CSS, and JavaScript</p>
+            <a href="#continue" class="primary-btn">Continue Learning</a>
+          </div>
+          <div class="course-card">
+            <div class="course-progress">
+              <div class="progress-bar" style="width: 30%"></div>
+              <span>30% Complete</span>
+            </div>
+            <h3>Data Science Fundamentals</h3>
+            <p>Master the basics of data analysis</p>
+            <a href="#continue" class="primary-btn">Continue Learning</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Section -->
+      <section class="features-section">
+        <h2>Quick Actions</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <h3>Upcoming Quizzes</h3>
+            <ul class="quiz-list">
+              <li>
+                <span class="quiz-name">JavaScript Basics</span>
+                <span class="quiz-date">Tomorrow, 2 PM</span>
+              </li>
+              <li>
+                <span class="quiz-name">CSS Layout</span>
+                <span class="quiz-date">Friday, 10 AM</span>
+              </li>
+            </ul>
+          </div>
+          <div class="feature-card">
+            <h3>Recent Achievements</h3>
+            <ul class="achievement-list">
+              <li>🏆 Completed HTML Fundamentals</li>
+              <li>⭐ Perfect Score in CSS Quiz</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Features List Section -->
+      <section class="learning-stats">
+        <h2>Learning Statistics</h2>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>15</h3>
+            <p>Quizzes Completed</p>
+          </div>
+          <div class="stat-card">
+            <h3>89%</h3>
+            <p>Average Score</p>
+          </div>
+          <div class="stat-card">
+            <h3>24h</h3>
+            <p>Study Time</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <div class="footer-content">
+          <div class="quick-links">
+            <a href="#help">Help Center</a>
+            <a href="#support">Support</a>
+            <a href="#feedback">Send Feedback</a>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
