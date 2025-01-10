@@ -35,16 +35,15 @@ body {
 
 /* Modern Header Styles */
 header {
+  position: sticky;
+  top: 0;
+  background: var(--background);
+  z-index: 1000;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #e2e8f0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 2rem;
-  background-color: var(--background);
-  border-bottom: 1px solid #e2e8f0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  backdrop-filter: blur(10px);
 }
 
 .logo h1 {
@@ -268,6 +267,20 @@ footer {
     display: block;
     width: 100%;
     margin: 1rem 0;
+  }
+
+  .user-actions {
+    display: none;
+  }
+
+  header {
+    padding: 1rem;
+  }
+
+  nav.active .user-actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
   }
 }
 
@@ -531,5 +544,63 @@ section h2 {
 
   .stat-card {
     padding: 1.5rem;
+  }
+}
+
+/* Add these styles for the hamburger menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px 0;
+  background: var(--text-primary);
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 70px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 70px);
+    background: var(--background);
+    transition: 0.3s ease;
+  }
+
+  nav.active {
+    left: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    gap: 2rem;
+  }
+
+  /* Hamburger Animation */
+  .hamburger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 6px);
+  }
+
+  .hamburger.active span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -5px);
   }
 }
