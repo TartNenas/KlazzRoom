@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Quiz - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/lecturer-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quizzes.html">Quizzes</a></li>
+          <li><a href="./jobs.html">Freelance Jobs</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <main class="lecturer-dashboard">
+      <!-- Header Section -->
+      <section class="page-header">
+        <div class="header-content">
+          <h1>Create New Quiz</h1>
+          <p>Design assessments to evaluate student understanding</p>
+        </div>
+      </section>
+
+      <!-- Quiz Creation Form -->
+      <section class="quiz-creation">
+        <!-- Quiz Header Section -->
+        <div class="form-section">
+          <h2>Quiz Details</h2>
+          <div class="form-group">
+            <label for="quizTitle">Quiz Title</label>
+            <input
+              type="text"
+              id="quizTitle"
+              placeholder="e.g., JavaScript Fundamentals Quiz"
+            />
+          </div>
+          <div class="form-group">
+            <label for="quizDescription">Description</label>
+            <textarea
+              id="quizDescription"
+              rows="4"
+              placeholder="Provide a brief overview of the quiz content..."
+            ></textarea>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="courseSelect">Associated Course</label>
+              <select id="courseSelect">
+                <option value="">Select Course</option>
+                <option value="web">Web Development Basics</option>
+                <option value="data">Data Science Fundamentals</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="timeLimit">Time Limit (minutes)</label>
+              <input type="number" id="timeLimit" min="5" value="30" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Questions Section -->
+        <div class="form-section">
+          <div class="section-header">
+            <h2>Questions</h2>
+            <div class="question-type-selector">
+              <button class="type-btn active" data-type="multiple">
+                Multiple Choice
+              </button>
+              <button class="type-btn" data-type="true-false">
+                True/False
+              </button>
+              <button class="type-btn" data-type="short">Short Answer</button>
+            </div>
+          </div>
+
+          <div class="questions-list">
+            <!-- Question Item -->
+            <div class="question-item">
+              <div class="question-header">
+                <span class="question-number">Question 1</span>
+                <div class="question-actions">
+                  <button class="icon-btn">📝</button>
+                  <button class="icon-btn">❌</button>
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Question Text</label>
+                <textarea
+                  rows="2"
+                  placeholder="Enter your question here..."
+                ></textarea>
+              </div>
+              <div class="options-list">
+                <div class="option-item">
+                  <input type="radio" name="correct1" id="opt1" />
+                  <input type="text" placeholder="Option 1" />
+                  <button class="icon-btn">❌</button>
+                </div>
+                <div class="option-item">
+                  <input type="radio" name="correct1" id="opt2" />
+                  <input type="text" placeholder="Option 2" />
+                  <button class="icon-btn">❌</button>
+                </div>
+                <button class="add-option-btn">+ Add Option</button>
+              </div>
+              <div class="form-group">
+                <label>Explanation (Optional)</label>
+                <textarea
+                  rows="2"
+                  placeholder="Explain the correct answer..."
+                ></textarea>
+              </div>
+            </div>
+
+            <button class="add-question-btn">+ Add New Question</button>
+          </div>
+        </div>
+
+        <!-- Quiz Settings -->
+        <div class="form-section">
+          <h2>Quiz Settings</h2>
+          <div class="settings-grid">
+            <div class="form-group">
+              <label for="passingScore">Passing Score (%)</label>
+              <input
+                type="number"
+                id="passingScore"
+                min="0"
+                max="100"
+                value="70"
+              />
+            </div>
+            <div class="form-group">
+              <label for="attempts">Maximum Attempts</label>
+              <input type="number" id="attempts" min="1" value="2" />
+            </div>
+            <div class="form-group">
+              <label for="shuffleQuestions">Shuffle Questions</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="shuffleQuestions" />
+                <span class="switch"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="showResults">Show Results Immediately</label>
+              <div class="toggle-switch">
+                <input type="checkbox" id="showResults" checked />
+                <span class="switch"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial Section -->
+        <div class="form-section testimonials">
+          <h2>Quiz Creation Tips</h2>
+          <div class="testimonials-grid">
+            <div class="testimonial-card">
+              <p>
+                "Clear and concise questions lead to better assessment results."
+              </p>
+              <cite>- Dr. Sarah Johnson, Education Expert</cite>
+            </div>
+            <div class="testimonial-card">
+              <p>
+                "Include a mix of question types to test different learning
+                aspects."
+              </p>
+              <cite>- Prof. Michael Chen, Course Director</cite>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button class="secondary-btn">Save as Draft</button>
+          <button class="primary-btn">Publish Quiz</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+
+      // Question type selector
+      const typeButtons = document.querySelectorAll(".type-btn");
+      typeButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          typeButtons.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+        });
+      });
+    </script>
+  </body>
+</html>

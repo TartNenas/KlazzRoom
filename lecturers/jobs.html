@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Freelance Job - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/lecturer-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quizzes.html">Quizzes</a></li>
+          <li><a href="./jobs.html">Freelance Jobs</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <main class="lecturer-dashboard">
+      <!-- Header Section -->
+      <section class="page-header">
+        <div class="header-content">
+          <h1>Post a Freelance Job</h1>
+          <p>
+            Find talented professionals to help with your educational content
+          </p>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="cta-content">
+          <h2>Why Post a Job?</h2>
+          <div class="benefits-grid">
+            <div class="benefit-card">
+              <span class="benefit-icon">🎯</span>
+              <h3>Find Expert Talent</h3>
+              <p>Access a pool of qualified educational content creators</p>
+            </div>
+            <div class="benefit-card">
+              <span class="benefit-icon">⚡</span>
+              <h3>Quick Turnaround</h3>
+              <p>Get your content created efficiently and professionally</p>
+            </div>
+            <div class="benefit-card">
+              <span class="benefit-icon">💰</span>
+              <h3>Cost Effective</h3>
+              <p>Flexible pricing options to suit your budget</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Application Form Section -->
+      <section class="job-form-section">
+        <h2>Job Details</h2>
+        <form class="job-posting-form">
+          <div class="form-group">
+            <label for="jobTitle">Job Title</label>
+            <input
+              type="text"
+              id="jobTitle"
+              placeholder="e.g., Course Content Developer"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="jobDescription">Job Description</label>
+            <textarea
+              id="jobDescription"
+              rows="6"
+              placeholder="Describe the job requirements, responsibilities, and deliverables..."
+              required
+            ></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="category">Category</label>
+              <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="content">Content Creation</option>
+                <option value="video">Video Production</option>
+                <option value="design">Instructional Design</option>
+                <option value="technical">Technical Writing</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="expertise">Required Expertise Level</label>
+              <select id="expertise" required>
+                <option value="">Select Level</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="expert">Expert</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="budget">Budget Range ($)</label>
+              <div class="budget-inputs">
+                <input
+                  type="number"
+                  id="budgetMin"
+                  placeholder="Min"
+                  required
+                />
+                <span>-</span>
+                <input
+                  type="number"
+                  id="budgetMax"
+                  placeholder="Max"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="deadline">Project Deadline</label>
+              <input type="date" id="deadline" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="skills">Required Skills</label>
+            <input
+              type="text"
+              id="skills"
+              placeholder="e.g., Video Editing, Content Writing, Adobe Premiere"
+              required
+            />
+            <small>Separate skills with commas</small>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="primary-btn">Post Job</button>
+            <button type="button" class="secondary-btn">Save as Draft</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Testimonial Section -->
+      <section class="testimonial-section">
+        <h2>Success Stories</h2>
+        <div class="testimonials-grid">
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "Found an excellent content creator who helped develop engaging
+                materials for my online course."
+              </p>
+              <cite>- Prof. James Wilson, Computer Science</cite>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <div class="testimonial-content">
+              <p>
+                "The quality of video production exceeded my expectations.
+                Highly recommend posting jobs here."
+              </p>
+              <cite>- Dr. Emily Chen, Data Science</cite>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>

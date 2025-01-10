@@ -248,3 +248,671 @@
 .feature-card:nth-child(4) {
   animation-delay: 0.3s;
 }
+
+/* Job Posting Styles */
+.job-posting-section {
+  background: var(--background);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 3rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.job-form {
+  max-width: 800px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+/* Job Cards */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.job-card {
+  background: var(--background);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.job-status {
+  padding: 0.25rem 0.75rem;
+  background: var(--primary);
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+.job-description {
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.job-meta {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+.job-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Job History Table */
+.jobs-table {
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  margin-top: 1.5rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--surface);
+}
+
+th {
+  background: var(--surface);
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+}
+
+.status.completed {
+  background: var(--success);
+  color: white;
+}
+
+.text-btn {
+  background: none;
+  border: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .section-header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .job-meta {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .job-actions {
+    flex-direction: column;
+  }
+
+  .jobs-table {
+    overflow-x: auto;
+  }
+
+  table {
+    min-width: 600px;
+  }
+}
+
+/* Course Creation Styles */
+.page-header {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+}
+
+.header-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.course-creation {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.form-section {
+  background: var(--background);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.form-section h2 {
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+}
+
+/* Module Builder */
+.module-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.module-item {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.module-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  padding: 0.25rem;
+}
+
+.lesson-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-left: 1.5rem;
+}
+
+.lesson-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.lesson-item input {
+  flex: 1;
+}
+
+.add-lesson-btn,
+.add-module-btn,
+.add-milestone-btn {
+  background: var(--surface);
+  border: 2px dashed #e2e8f0;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.add-lesson-btn:hover,
+.add-module-btn:hover,
+.add-milestone-btn:hover {
+  background: var(--background);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Timeline Builder */
+.timeline-builder {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.milestone-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.milestone-item {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.milestone-item input[type="text"] {
+  flex: 1;
+}
+
+/* Settings Grid */
+.settings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 2rem 1.5rem;
+  }
+
+  .header-content h1 {
+    font-size: 2rem;
+  }
+
+  .form-section {
+    padding: 1.5rem;
+  }
+
+  .lesson-item,
+  .milestone-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}
+
+/* Animations */
+.form-section {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.form-section:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.form-section:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.form-section:nth-child(4) {
+  animation-delay: 0.3s;
+}
+
+/* Quiz Creation Styles */
+.quiz-creation {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.question-type-selector {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.type-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--primary);
+  background: none;
+  color: var(--primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.type-btn.active {
+  background: var(--primary);
+  color: white;
+}
+
+.questions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.question-item {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.question-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.question-number {
+  font-weight: 500;
+  color: var(--primary);
+}
+
+.options-list {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.option-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: var(--background);
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+}
+
+.option-item input[type="text"] {
+  flex: 1;
+}
+
+.add-option-btn,
+.add-question-btn {
+  background: var(--surface);
+  border: 2px dashed #e2e8f0;
+  padding: 0.75rem;
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.add-option-btn:hover,
+.add-question-btn:hover {
+  background: var(--background);
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Toggle Switch */
+.toggle-switch {
+  position: relative;
+  width: 50px;
+  height: 24px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #e2e8f0;
+  transition: 0.4s;
+  border-radius: 12px;
+}
+
+.switch:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .switch {
+  background-color: var(--primary);
+}
+
+input:checked + .switch:before {
+  transform: translateX(26px);
+}
+
+/* Testimonials */
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.testimonial-card {
+  background: var(--surface);
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.testimonial-card cite {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .question-type-selector {
+    flex-wrap: wrap;
+  }
+
+  .type-btn {
+    flex: 1;
+    text-align: center;
+  }
+
+  .option-item {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .option-item input[type="radio"] {
+    align-self: flex-start;
+  }
+
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+.question-item {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.question-item:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.question-item:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.testimonial-card {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Job Posting Page Styles */
+.cta-section {
+  background: var(--surface);
+  padding: 3rem 2rem;
+  border-radius: var(--radius-lg);
+  margin-bottom: 3rem;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.benefit-card {
+  background: var(--background);
+  padding: 2rem;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.benefit-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.job-form-section {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: var(--background);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.job-posting-form {
+  margin-top: 2rem;
+}
+
+.budget-inputs {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.budget-inputs input {
+  flex: 1;
+}
+
+.budget-inputs span {
+  color: var(--text-secondary);
+}
+
+small {
+  display: block;
+  margin-top: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .budget-inputs {
+    flex-direction: column;
+  }
+
+  .budget-inputs span {
+    display: none;
+  }
+
+  .job-form-section {
+    padding: 1.5rem;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animations */
+.benefit-card {
+  animation: slideIn 0.3s ease forwards;
+}
+
+.benefit-card:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.benefit-card:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+.testimonial-card {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
