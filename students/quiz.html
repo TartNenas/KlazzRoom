@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Basics Quiz - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/student-styles.css" />
+    <link rel="stylesheet" href="../Assets/css/quiz-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quizzes.html">My Quizzes</a></li>
+          <li><a href="./progress.html">Progress</a></li>
+          <li><a href="./profile.html">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <span class="timer">Time Left: 15:00</span>
+      </div>
+    </header>
+
+    <main class="quiz-container">
+      <!-- Quiz Header Section -->
+      <section class="quiz-header">
+        <div class="quiz-info">
+          <h1>JavaScript Basics Quiz</h1>
+          <p>Test your knowledge of JavaScript fundamentals</p>
+          <div class="quiz-meta">
+            <span>10 Questions</span>
+            <span>•</span>
+            <span>15 Minutes</span>
+            <span>•</span>
+            <span>70% Passing Score</span>
+          </div>
+        </div>
+        <div class="progress-indicator">
+          <span>Question 3 of 10</span>
+          <div class="progress-bar">
+            <div style="width: 30%"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quiz Section -->
+      <section class="quiz-content">
+        <div class="question-card">
+          <h2>Question 3:</h2>
+          <p class="question-text">
+            Which of the following is the correct way to declare a variable in
+            JavaScript?
+          </p>
+          <div class="options-list">
+            <label class="option">
+              <input type="radio" name="q3" value="a" />
+              <span class="option-text">var myVariable = 10;</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="b" />
+              <span class="option-text">let myVariable = 10;</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="c" />
+              <span class="option-text">const myVariable = 10;</span>
+            </label>
+            <label class="option">
+              <input type="radio" name="q3" value="d" />
+              <span class="option-text">All of the above</span>
+            </label>
+          </div>
+        </div>
+      </section>
+
+      <!-- How It Works Section -->
+      <section class="quiz-instructions">
+        <h2>How to Complete the Quiz</h2>
+        <div class="instructions-grid">
+          <div class="instruction-card">
+            <span class="step-number">1</span>
+            <p>Read each question carefully</p>
+          </div>
+          <div class="instruction-card">
+            <span class="step-number">2</span>
+            <p>Select one answer per question</p>
+          </div>
+          <div class="instruction-card">
+            <span class="step-number">3</span>
+            <p>Click Next to proceed</p>
+          </div>
+          <div class="instruction-card">
+            <span class="step-number">4</span>
+            <p>Submit when finished</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Navigation Feature -->
+      <section class="quiz-navigation">
+        <div class="question-navigator">
+          <h3>Question Navigator</h3>
+          <div class="question-dots">
+            <span class="dot completed">1</span>
+            <span class="dot completed">2</span>
+            <span class="dot current">3</span>
+            <span class="dot">4</span>
+            <span class="dot">5</span>
+            <span class="dot">6</span>
+            <span class="dot">7</span>
+            <span class="dot">8</span>
+            <span class="dot">9</span>
+            <span class="dot">10</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="quiz-actions">
+        <button class="secondary-btn">Previous</button>
+        <button class="primary-btn">Next Question</button>
+      </section>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
+</html>
