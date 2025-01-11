@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/courses-styles.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./quizzes.html">Quizzes</a></li>
+          <li><a href="./courses.html" class="active">Courses</a></li>
+          <li><a href="./leaderboard.html">Leaderboard</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="../login.html" class="btn-secondary">Login</a>
+        <a href="../signup.html" class="btn-primary">Sign Up</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="courses-hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Discover Your Next Course</h1>
+            <p>Learn from Malaysia's top universities and industry experts</p>
+            <div class="search-bar">
+              <input type="text" placeholder="Search for courses..." />
+              <button class="btn-primary">Search</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Available Courses -->
+      <section class="available-courses">
+        <div class="container">
+          <div class="section-header">
+            <h2>Featured Courses</h2>
+            <div class="course-filters">
+              <select class="category-filter">
+                <option value="all">All Categories</option>
+                <option value="technology">Technology</option>
+                <option value="business">Business</option>
+                <option value="design">Design</option>
+                <option value="science">Science</option>
+              </select>
+              <select class="level-filter">
+                <option value="all">All Levels</option>
+                <option value="beginner">Beginner</option>
+                <option value="intermediate">Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="courses-grid">
+            <div class="course-card">
+              <div class="course-image">
+                <img
+                  src="../Assets/images/courses/web-dev.jpg"
+                  alt="Web Development"
+                />
+                <span class="course-level">Intermediate</span>
+              </div>
+              <div class="course-content">
+                <span class="university"
+                  >Universiti Teknologi Malaysia (UTM)</span
+                >
+                <h3>Modern Web Development</h3>
+                <p>Learn full-stack development with modern technologies</p>
+                <div class="course-meta">
+                  <span>⭐ 4.8 (2.3k reviews)</span>
+                  <span>👥 12,500 students</span>
+                </div>
+                <div class="course-footer">
+                  <span class="price">RM 199</span>
+                  <a href="#" class="btn-secondary">Learn More</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- More course cards... -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Best University Courses -->
+      <section class="university-courses">
+        <div class="container">
+          <h2>Top University Courses</h2>
+          <div class="university-tabs">
+            <button class="tab active">UTM</button>
+            <button class="tab">UM</button>
+            <button class="tab">USM</button>
+            <button class="tab">UPM</button>
+          </div>
+
+          <div class="university-courses-grid">
+            <div class="course-card featured">
+              <div class="course-image">
+                <img
+                  src="../Assets/images/courses/data-science.jpg"
+                  alt="Data Science"
+                />
+                <span class="course-level">Advanced</span>
+              </div>
+              <div class="course-content">
+                <h3>Data Science & Analytics</h3>
+                <p>Master data analysis with Python and Machine Learning</p>
+                <div class="course-meta">
+                  <span>⭐ 4.9 (1.8k reviews)</span>
+                  <span>🎓 Faculty of Computing</span>
+                </div>
+                <a href="#" class="btn-primary">Enroll Now</a>
+              </div>
+            </div>
+            <!-- More university course cards... -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Top Rated Courses -->
+      <section class="top-rated-courses">
+        <div class="container">
+          <h2>Highest Rated Courses</h2>
+          <div class="rating-courses-grid">
+            <div class="course-card compact">
+              <div class="rating-badge">4.9</div>
+              <div class="course-content">
+                <span class="university">Universiti Malaya (UM)</span>
+                <h3>Artificial Intelligence Fundamentals</h3>
+                <div class="course-meta">
+                  <span>📚 12 weeks</span>
+                  <span>🎓 Computer Science</span>
+                </div>
+                <a href="#" class="btn-secondary">View Details</a>
+              </div>
+            </div>
+            <!-- More rated course cards... -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Start Learning Today</h2>
+            <p>Join thousands of students already learning on EduPlus</p>
+            <div class="cta-buttons">
+              <a href="../signup.html" class="btn-primary">Get Started</a>
+              <a href="#" class="btn-secondary">Browse All Courses</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h2>EduPlus</h2>
+            <p>Empowering learners worldwide through interactive education</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./courses.html">Courses</a></li>
+              <li><a href="./quizzes.html">Quizzes</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest updates</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 EduPlus. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
