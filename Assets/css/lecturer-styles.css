@@ -324,3 +324,297 @@ nav a.active::after {
     }
   }
 }
+
+/* Course Management Styles */
+.course-management {
+  background: var(--surface);
+  border-radius: 1rem;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.search-filters {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  flex: 1;
+}
+
+.search-bar input {
+  border: none;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.filters {
+  display: flex;
+  gap: 1rem;
+}
+
+.filters select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: white;
+  min-width: 150px;
+}
+
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.view-toggle button {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  background: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.view-toggle button.active {
+  background: var(--primary);
+  color: white;
+  border-color: var(--primary);
+}
+
+/* Course Grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.course-card {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+  transform: translateY(-5px);
+}
+
+.course-header {
+  position: relative;
+  height: 160px;
+}
+
+.course-header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.status {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.status.active {
+  background: var(--success-light);
+  color: var(--success);
+}
+
+.quick-actions {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.action-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.25rem;
+}
+
+.action-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  display: none;
+}
+
+.quick-actions:hover .action-menu {
+  display: block;
+}
+
+.action-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.action-menu a:hover {
+  background: var(--surface);
+}
+
+.action-menu a.delete {
+  color: var(--error);
+}
+
+.course-content {
+  padding: 1.5rem;
+}
+
+.course-content h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.25rem;
+}
+
+.course-stats {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+.progress-info {
+  margin-top: 1rem;
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background: var(--surface);
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 1rem;
+}
+
+/* Analytics Overview */
+.analytics-overview {
+  margin-top: 2rem;
+}
+
+.analytics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.stat-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0.5rem 0;
+}
+
+.trend {
+  font-size: 0.875rem;
+}
+
+.trend.up {
+  color: var(--success);
+}
+
+.trend.down {
+  color: var(--error);
+}
+
+.trend.neutral {
+  color: var(--text-secondary);
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .course-card,
+  .stat-card,
+  .action-menu {
+    background: var(--dark-surface);
+  }
+
+  .search-bar,
+  .filters select,
+  .view-toggle button {
+    background: var(--dark-surface);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
+  }
+
+  .action-menu a:hover {
+    background: var(--dark-surface-hover);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .management-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .search-filters {
+    flex-direction: column;
+  }
+
+  .filters {
+    width: 100%;
+  }
+
+  .filters select {
+    flex: 1;
+  }
+
+  .view-toggle {
+    width: 100%;
+  }
+
+  .view-toggle button {
+    flex: 1;
+  }
+}
