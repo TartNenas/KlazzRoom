@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quizzes - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/quizzes.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./courses.html">Courses</a></li>
+          <li><a href="./quizzes.html" class="active">Quizzes</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="./login.html" class="btn-secondary">Login</a>
+        <a href="./signup.html" class="btn-primary">Sign Up</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero Section -->
+      <section class="quiz-hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Test Your Knowledge</h1>
+            <p>
+              Challenge yourself with our interactive quizzes and earn rewards
+            </p>
+            <a href="#quizzes" class="btn-primary">Start Learning</a>
+          </div>
+          <div class="hero-image">
+            <img src="../Assets/images/quiz-hero.svg" alt="Quiz Illustration" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Featured Quizzes -->
+      <section id="quizzes" class="featured-quizzes">
+        <div class="container">
+          <h2>Popular Quizzes</h2>
+          <div class="quiz-grid">
+            <div class="quiz-card">
+              <div class="quiz-image">
+                <img src="../Assets/images/web-dev.svg" alt="Web Development" />
+              </div>
+              <div class="quiz-content">
+                <span class="quiz-category">Web Development</span>
+                <h3>JavaScript Fundamentals</h3>
+                <p>
+                  Test your JavaScript knowledge with 20 challenging questions
+                </p>
+                <div class="quiz-meta">
+                  <span>⏱️ 30 mins</span>
+                  <span>⭐ 4.8/5</span>
+                </div>
+                <a href="#" class="btn-secondary">Take Quiz</a>
+              </div>
+            </div>
+
+            <div class="quiz-card">
+              <div class="quiz-image">
+                <img
+                  src="../Assets/images/data-science.svg"
+                  alt="Data Science"
+                />
+              </div>
+              <div class="quiz-content">
+                <span class="quiz-category">Data Science</span>
+                <h3>Python for Data Analysis</h3>
+                <p>
+                  Master Python libraries for data analysis with practical
+                  questions
+                </p>
+                <div class="quiz-meta">
+                  <span>⏱️ 45 mins</span>
+                  <span>⭐ 4.9/5</span>
+                </div>
+                <a href="#" class="btn-secondary">Take Quiz</a>
+              </div>
+            </div>
+
+            <div class="quiz-card">
+              <div class="quiz-image">
+                <img src="../Assets/images/ui-design.svg" alt="UI Design" />
+              </div>
+              <div class="quiz-content">
+                <span class="quiz-category">UI Design</span>
+                <h3>UI/UX Principles</h3>
+                <p>
+                  Learn essential design principles through interactive
+                  questions
+                </p>
+                <div class="quiz-meta">
+                  <span>⏱️ 25 mins</span>
+                  <span>⭐ 4.7/5</span>
+                </div>
+                <a href="#" class="btn-secondary">Take Quiz</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Rewards Section -->
+      <section class="rewards-section">
+        <div class="container">
+          <h2>Complete Quizzes, Earn Rewards</h2>
+          <div class="rewards-grid">
+            <div class="reward-card">
+              <div class="reward-icon">🏆</div>
+              <h3>Achievement Badges</h3>
+              <p>Earn unique badges for completing quiz series</p>
+            </div>
+            <div class="reward-card">
+              <div class="reward-icon">💎</div>
+              <h3>Premium Content</h3>
+              <p>Unlock exclusive learning materials</p>
+            </div>
+            <div class="reward-card">
+              <div class="reward-icon">📜</div>
+              <h3>Certificates</h3>
+              <p>Get certified for your knowledge</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leaderboard Section -->
+      <section class="leaderboard-section">
+        <div class="container">
+          <h2>Top Performers</h2>
+          <div class="leaderboard">
+            <div class="leaderboard-header">
+              <span>Rank</span>
+              <span>User</span>
+              <span>Score</span>
+              <span>Badges</span>
+            </div>
+            <div class="leaderboard-item">
+              <span class="rank">1</span>
+              <span class="user">
+                <img src="../Assets/images/avatar1.jpg" alt="User Avatar" />
+                Sarah Johnson
+              </span>
+              <span class="score">980</span>
+              <span class="badges">🏆 x 5</span>
+            </div>
+            <div class="leaderboard-item">
+              <span class="rank">2</span>
+              <span class="user">
+                <img src="../Assets/images/avatar2.jpg" alt="User Avatar" />
+                Mike Chen
+              </span>
+              <span class="score">945</span>
+              <span class="badges">🏆 x 4</span>
+            </div>
+            <div class="leaderboard-item">
+              <span class="rank">3</span>
+              <span class="user">
+                <img src="../Assets/images/avatar3.jpg" alt="User Avatar" />
+                Emma Davis
+              </span>
+              <span class="score">920</span>
+              <span class="badges">🏆 x 4</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Test Your Skills?</h2>
+            <p>
+              Join thousands of learners and start your learning journey today
+            </p>
+            <div class="cta-buttons">
+              <a href="./signup.html" class="btn-primary">Get Started</a>
+              <a href="./about.html" class="btn-secondary">Learn More</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h2>EduPlus</h2>
+            <p>Empowering learners worldwide through interactive education</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./courses.html">Courses</a></li>
+              <li><a href="./quizzes.html">Quizzes</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest updates</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 EduPlus. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
