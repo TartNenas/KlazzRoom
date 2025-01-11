@@ -1,8 +1,10 @@
 /* Base Layout */
 .lecturer-dashboard {
+  padding-top: 90px; /* header height + some space */
   min-height: 100vh;
   background: var(--background);
-  padding: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 /* Header & Navigation */
@@ -18,18 +20,35 @@ header {
   left: 0;
   right: 0;
   z-index: 100;
+  height: 70px;
 }
 
+/* Logo */
 .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo h1 {
   font-size: 1.5rem;
   font-weight: bold;
   color: var(--primary);
+  margin: 0;
+}
+
+/* Navigation */
+nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 nav ul {
   display: flex;
-  gap: 2rem;
+  gap: 2.5rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
@@ -38,17 +57,34 @@ nav a {
   font-weight: 500;
   font-size: 0.875rem;
   transition: color 0.2s ease;
+  padding: 0.5rem 0;
+  position: relative;
 }
 
-nav a:hover,
+nav a:hover {
+  color: var(--primary);
+}
+
 nav a.active {
   color: var(--primary);
 }
 
+nav a.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+/* User Actions */
 .user-actions {
   display: flex;
-  gap: 1rem;
   align-items: center;
+  gap: 1.5rem;
 }
 
 .notification-icon,
@@ -57,6 +93,40 @@ nav a.active {
   text-decoration: none;
   font-size: 1.25rem;
   transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface);
+}
+
+.notification-icon:hover,
+.profile-icon:hover {
+  color: var(--primary);
+  background: var(--surface-hover);
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 2px;
+  background: var(--text-primary);
+  border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
 /* Dashboard Overview */
@@ -171,22 +241,18 @@ nav a.active {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .lecturer-dashboard {
-    padding: 1rem;
-  }
-
   header {
     padding: 1rem;
   }
 
-  nav {
-    display: none;
+  .hamburger {
+    display: flex;
   }
 
-  nav.active {
-    display: block;
+  nav {
+    display: none;
     position: fixed;
-    top: 60px;
+    top: 70px;
     left: 0;
     right: 0;
     background: white;
@@ -194,31 +260,57 @@ nav a.active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
 
+  nav.active {
+    display: block;
+  }
+
   nav ul {
     flex-direction: column;
     gap: 1rem;
   }
 
-  .form-section {
-    padding: 1.5rem;
+  nav a {
+    display: block;
+    padding: 0.75rem 0;
+  }
+
+  nav a.active::after {
+    display: none;
+  }
+
+  nav a.active {
+    background: var(--surface);
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .lecturer-dashboard {
+    padding: 90px 1rem 1rem 1rem;
   }
 }
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
-  .lecturer-dashboard {
-    background: var(--dark-background);
-  }
-
-  header,
-  .action-card,
-  .stat-card,
-  .course-form {
+  header {
     background: var(--dark-surface);
   }
 
-  .btn-secondary {
-    border-color: var(--dark-border);
-    color: var(--dark-text);
+  .notification-icon,
+  .profile-icon {
+    background: var(--dark-surface-hover);
+  }
+
+  .hamburger span {
+    background: var(--dark-text);
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      background: var(--dark-surface);
+    }
+
+    nav a.active {
+      background: var(--dark-surface-hover);
+    }
   }
 }
