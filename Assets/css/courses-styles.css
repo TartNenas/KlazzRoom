@@ -97,7 +97,7 @@
 .course-level {
   position: absolute;
   top: 1rem;
-  right: 1rem;
+  left: 1rem;
   padding: 0.5rem 1rem;
   border-radius: 2rem;
   font-size: 0.875rem;
@@ -111,15 +111,7 @@
 }
 
 .course-overlay {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1rem;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  color: white;
-  display: flex;
-  justify-content: space-between;
+  display: none;
 }
 
 .course-tags {
@@ -241,7 +233,7 @@
 
 .rating-badge {
   position: absolute;
-  top: -1rem;
+  top: 1rem;
   right: 1rem;
   background: var(--primary);
   color: white;
@@ -252,6 +244,7 @@
   align-items: center;
   justify-content: center;
   font-weight: bold;
+  z-index: 2;
 }
 
 /* CTA Section */
@@ -314,4 +307,16 @@
   .tab.active {
     background: var(--primary);
   }
+}
+
+.course-meta {
+  display: flex;
+  gap: 1rem;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.course-content {
+  padding: 1.5rem;
 }
