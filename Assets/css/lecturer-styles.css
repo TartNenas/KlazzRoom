@@ -11,7 +11,7 @@
 
 /* Header & Navigation */
 header {
-  background: white;
+  background-color: white;
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
@@ -23,7 +23,6 @@ header {
   right: 0;
   z-index: 1000;
   height: 70px;
-  background: white; /* Solid background instead of transparent */
 }
 
 /* Logo */
@@ -258,11 +257,11 @@ nav a.active::after {
     top: 70px;
     left: 0;
     right: 0;
-    background: white; /* Solid background for mobile nav */
+    background-color: white;
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   nav.active {
@@ -299,7 +298,7 @@ nav a.active::after {
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   header {
-    background: var(--dark-surface); /* Solid dark background */
+    background-color: var(--dark-surface);
   }
 
   .notification-icon,
@@ -312,12 +311,12 @@ nav a.active::after {
   }
 
   nav {
-    background: var(--dark-surface);
+    background-color: var(--dark-surface);
   }
 
   @media (max-width: 768px) {
     nav {
-      background: var(--dark-surface);
+      background-color: var(--dark-surface);
     }
 
     nav a.active {
