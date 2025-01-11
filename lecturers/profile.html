@@ -7,6 +7,227 @@
     <link rel="stylesheet" href="../Assets/css/styles.css" />
     <link rel="stylesheet" href="../Assets/css/lecturer-styles.css" />
     <link rel="stylesheet" href="../Assets/css/profile-styles.css" />
-    ...
   </head>
+  <body>
+    <!-- Navbar -->
+    <header>
+      <div class="logo">
+        <h1>EduPlus</h1>
+      </div>
+
+      <button class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav>
+        <ul>
+          <li><a href="./index.html">Dashboard</a></li>
+          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./quizzes.html">Quizzes</a></li>
+          <li><a href="./jobs.html">Freelance Jobs</a></li>
+          <li><a href="./profile.html" class="active">Profile</a></li>
+        </ul>
+      </nav>
+
+      <div class="user-actions">
+        <a href="#notifications" class="notification-icon">🔔</a>
+        <a href="#profile" class="profile-icon">👤</a>
+      </div>
+    </header>
+
+    <main class="lecturer-dashboard">
+      <!-- Profile Header -->
+      <section class="profile-header">
+        <div class="profile-info">
+          <div class="profile-avatar">
+            <img
+              src="../Assets/images/avatar-placeholder.png"
+              alt="Profile Picture"
+            />
+            <button class="edit-avatar">Edit Photo</button>
+          </div>
+          <div class="profile-details">
+            <h1>Dr. Sarah Johnson</h1>
+            <p>Professor of Computer Science</p>
+            <div class="profile-stats">
+              <span>Teaching since 2015</span>
+              <span>•</span>
+              <span>8 Active Courses</span>
+              <span>•</span>
+              <span>450+ Students</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profile Content -->
+      <div class="profile-content">
+        <!-- Personal Information -->
+        <section class="profile-section">
+          <h2>Personal Information</h2>
+          <form class="settings-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" value="Dr. Sarah Johnson" />
+              </div>
+              <div class="form-group">
+                <label for="title">Academic Title</label>
+                <input
+                  type="text"
+                  id="title"
+                  value="Professor of Computer Science"
+                />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  value="sarah.johnson@eduplus.com"
+                />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" value="+1 234 567 890" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="bio">Professional Bio</label>
+              <textarea id="bio" rows="4">
+Professor with over 10 years of experience in Computer Science education. Specializing in Web Development and Data Science. Passionate about creating engaging online learning experiences.</textarea
+              >
+            </div>
+          </form>
+        </section>
+
+        <!-- Expertise & Qualifications -->
+        <section class="profile-section">
+          <h2>Expertise & Qualifications</h2>
+          <div class="expertise-grid">
+            <div class="expertise-card">
+              <h3>Areas of Expertise</h3>
+              <div class="tag-list">
+                <span class="tag">Web Development</span>
+                <span class="tag">Data Science</span>
+                <span class="tag">Machine Learning</span>
+                <span class="tag">Python</span>
+                <span class="tag">JavaScript</span>
+                <button class="add-tag">+ Add</button>
+              </div>
+            </div>
+
+            <div class="expertise-card">
+              <h3>Qualifications</h3>
+              <div class="qualification-list">
+                <div class="qualification-item">
+                  <span class="qualification-year">2012</span>
+                  <div class="qualification-details">
+                    <h4>Ph.D. in Computer Science</h4>
+                    <p>Stanford University</p>
+                  </div>
+                </div>
+                <div class="qualification-item">
+                  <span class="qualification-year">2008</span>
+                  <div class="qualification-details">
+                    <h4>M.Sc. in Software Engineering</h4>
+                    <p>MIT</p>
+                  </div>
+                </div>
+                <button class="add-qualification">+ Add Qualification</button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Teaching Statistics -->
+        <section class="profile-section">
+          <h2>Teaching Statistics</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-value">4.8</div>
+              <p>Average Rating</p>
+              <div class="rating-stars">⭐⭐⭐⭐⭐</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">15,000+</div>
+              <p>Total Students</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">25</div>
+              <p>Courses Created</p>
+            </div>
+            <div class="stat-card">
+              <div class="stat-value">98%</div>
+              <p>Response Rate</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Notification Preferences -->
+        <section class="profile-section">
+          <h2>Notification Preferences</h2>
+          <div class="preferences-form">
+            <div class="preference-group">
+              <label class="switch-label">
+                Course Enrollments
+                <input type="checkbox" checked />
+                <span class="switch"></span>
+              </label>
+            </div>
+            <div class="preference-group">
+              <label class="switch-label">
+                Student Questions
+                <input type="checkbox" checked />
+                <span class="switch"></span>
+              </label>
+            </div>
+            <div class="preference-group">
+              <label class="switch-label">
+                Quiz Submissions
+                <input type="checkbox" checked />
+                <span class="switch"></span>
+              </label>
+            </div>
+            <div class="preference-group">
+              <label class="switch-label">
+                Job Applications
+                <input type="checkbox" checked />
+                <span class="switch"></span>
+              </label>
+            </div>
+          </div>
+        </section>
+
+        <!-- Form Actions -->
+        <div class="form-actions">
+          <button type="button" class="secondary-btn">Cancel Changes</button>
+          <button type="submit" class="primary-btn">Save Changes</button>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const nav = document.querySelector("nav");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          hamburger.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
 </html>
