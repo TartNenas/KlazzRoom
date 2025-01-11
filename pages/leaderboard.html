@@ -3,106 +3,266 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EduPlus - University Leaderboard</title>
-    <link rel="stylesheet" href="../assets/css/styles.css" />
-    <link rel="stylesheet" href="../assets/css/leaderboard-styles.css" />
+    <title>Leaderboard - EduPlus</title>
+    <link rel="stylesheet" href="../Assets/css/styles.css" />
+    <link rel="stylesheet" href="../Assets/css/leaderboard-styles.css" />
   </head>
   <body>
-    <!-- Header -->
+    <!-- Navbar -->
     <header>
       <div class="logo">
         <h1>EduPlus</h1>
       </div>
-      <h2 class="page-title">University Leaderboard</h2>
-      <div class="user-actions">
-        <a href="#notifications" class="notification-icon">🔔</a>
-        <a href="#profile" class="profile-icon">👤</a>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="./about.html">About</a></li>
+          <li><a href="./quizzes.html">Quizzes</a></li>
+          <li><a href="./courses.html">Courses</a></li>
+          <li><a href="./leaderboard.html" class="active">Leaderboard</a></li>
+        </ul>
+      </nav>
+      <div class="auth-buttons">
+        <a href="../login.html" class="btn-secondary">Login</a>
+        <a href="../signup.html" class="btn-primary">Sign Up</a>
       </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="leaderboard-container">
-      <!-- Filters Section -->
-      <section class="filters">
-        <div class="search-bar">
-          <input type="text" placeholder="Search universities or students..." />
-          <button>🔍</button>
-        </div>
-        <div class="filter-options">
-          <select name="course" id="course-filter">
-            <option value="all">All Courses</option>
-            <option value="python">Python Basics</option>
-            <option value="web">Web Development</option>
-          </select>
-          <select name="period" id="time-filter">
-            <option value="week">This Week</option>
-            <option value="month">This Month</option>
-            <option value="all">All Time</option>
-          </select>
+    <main>
+      <!-- Hero Section -->
+      <section class="leaderboard-hero">
+        <div class="container">
+          <div class="hero-content">
+            <h1>Global Rankings</h1>
+            <p>Compete with students worldwide and earn amazing rewards</p>
+          </div>
         </div>
       </section>
 
-      <!-- Rankings Section -->
-      <section class="rankings">
-        <!-- Top 3 Universities -->
-        <div class="top-universities">
-          <div class="university-card gold">
-            <span class="rank">1</span>
-            <h3>MIT</h3>
-            <p class="score">98,750 pts</p>
-            <span class="trend up">↑ 2</span>
+      <!-- Student Leaderboard Section -->
+      <section class="student-leaderboard">
+        <div class="container">
+          <div class="section-header">
+            <h2>Top Students</h2>
+            <div class="leaderboard-filters">
+              <select class="time-filter">
+                <option value="weekly">This Week</option>
+                <option value="monthly">This Month</option>
+                <option value="alltime">All Time</option>
+              </select>
+              <select class="category-filter">
+                <option value="all">All Categories</option>
+                <option value="webdev">Web Development</option>
+                <option value="datascience">Data Science</option>
+                <option value="design">UI/UX Design</option>
+              </select>
+            </div>
           </div>
-          <div class="university-card silver">
-            <span class="rank">2</span>
-            <h3>Stanford</h3>
-            <p class="score">95,200 pts</p>
-            <span class="trend down">↓ 1</span>
+
+          <div class="top-performers">
+            <div class="performer-card silver">
+              <div class="rank">2</div>
+              <img
+                src="../Assets/images/avatars/student2.jpg"
+                alt="Sarah Chen"
+              />
+              <h3>Sarah Chen</h3>
+              <p class="university">Stanford University</p>
+              <p class="points">9,850 pts</p>
+            </div>
+            <div class="performer-card gold">
+              <div class="rank">1</div>
+              <img
+                src="../Assets/images/avatars/student1.jpg"
+                alt="John Smith"
+              />
+              <h3>John Smith</h3>
+              <p class="university">MIT</p>
+              <p class="points">10,200 pts</p>
+            </div>
+            <div class="performer-card bronze">
+              <div class="rank">3</div>
+              <img
+                src="../Assets/images/avatars/student3.jpg"
+                alt="Emma Davis"
+              />
+              <h3>Emma Davis</h3>
+              <p class="university">Harvard University</p>
+              <p class="points">9,600 pts</p>
+            </div>
           </div>
-          <div class="university-card bronze">
-            <span class="rank">3</span>
-            <h3>Harvard</h3>
-            <p class="score">92,800 pts</p>
-            <span class="trend up">↑ 1</span>
+
+          <div class="leaderboard-table">
+            <!-- Table headers -->
+            <div class="table-header">
+              <span>Rank</span>
+              <span>Student</span>
+              <span>University</span>
+              <span>Points</span>
+              <span>Badges</span>
+            </div>
+            <!-- Table rows -->
+            <div class="table-row">
+              <span>4</span>
+              <span class="student-info">
+                <img
+                  src="../Assets/images/avatars/student4.jpg"
+                  alt="Alex Wong"
+                />
+                Alex Wong
+              </span>
+              <span>UC Berkeley</span>
+              <span>9,400 pts</span>
+              <span>🏆 × 8</span>
+            </div>
+            <!-- More rows... -->
           </div>
         </div>
+      </section>
 
-        <!-- Remaining Rankings -->
-        <div class="rankings-list">
-          <!-- Example of an expanded row -->
-          <div class="university-row expanded">
-            <div class="main-info">
-              <span class="rank">4</span>
-              <h3>Cambridge University</h3>
-              <p class="score">90,150 pts</p>
-              <button class="expand-btn">▼</button>
+      <!-- How It Works Section -->
+      <section class="how-it-works">
+        <div class="container">
+          <h2>How It Works</h2>
+          <div class="steps-grid">
+            <div class="step-card">
+              <div class="step-icon">📝</div>
+              <h3>Take Quizzes</h3>
+              <p>Complete quizzes in various subjects to earn points</p>
             </div>
-            <div class="student-contributors">
-              <div class="student">
-                <span class="student-rank">1.</span>
-                <span class="student-name">John Smith</span>
-                <span class="student-score">15,200 pts</span>
-              </div>
-              <div class="student">
-                <span class="student-rank">2.</span>
-                <span class="student-name">Emma Wilson</span>
-                <span class="student-score">14,800 pts</span>
-              </div>
+            <div class="step-card">
+              <div class="step-icon">⭐</div>
+              <h3>Earn Points</h3>
+              <p>Get points based on accuracy and completion time</p>
+            </div>
+            <div class="step-card">
+              <div class="step-icon">🏆</div>
+              <h3>Climb Rankings</h3>
+              <p>
+                Compete with students globally and represent your university
+              </p>
+            </div>
+            <div class="step-card">
+              <div class="step-icon">🎁</div>
+              <h3>Win Rewards</h3>
+              <p>Redeem points for exciting prizes and benefits</p>
             </div>
           </div>
-          <!-- Additional university rows -->
+        </div>
+      </section>
+
+      <!-- Rewards Section -->
+      <section class="rewards-section">
+        <div class="container">
+          <h2>Available Rewards</h2>
+          <div class="rewards-grid">
+            <div class="reward-card">
+              <img
+                src="../Assets/images/rewards/amazon.svg"
+                alt="Amazon Gift Card"
+              />
+              <h3>Amazon Gift Card</h3>
+              <p class="points-required">5,000 points</p>
+              <button class="btn-secondary">Redeem</button>
+            </div>
+            <div class="reward-card">
+              <img
+                src="../Assets/images/rewards/course.svg"
+                alt="Premium Course"
+              />
+              <h3>Premium Course Access</h3>
+              <p class="points-required">8,000 points</p>
+              <button class="btn-secondary">Redeem</button>
+            </div>
+            <div class="reward-card">
+              <img
+                src="../Assets/images/rewards/mentorship.svg"
+                alt="Mentorship"
+              />
+              <h3>1-on-1 Mentorship</h3>
+              <p class="points-required">12,000 points</p>
+              <button class="btn-secondary">Redeem</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- University Rankings -->
+      <section class="university-rankings">
+        <div class="container">
+          <h2>Top Universities</h2>
+          <div class="university-leaderboard">
+            <div class="university-card">
+              <span class="rank">1</span>
+              <img src="../Assets/images/universities/mit.svg" alt="MIT" />
+              <h3>Massachusetts Institute of Technology</h3>
+              <p class="total-points">98,750 points</p>
+              <p class="student-count">1,250 active students</p>
+            </div>
+            <!-- More university cards... -->
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section class="cta-section">
+        <div class="container">
+          <div class="cta-content">
+            <h2>Ready to Join the Competition?</h2>
+            <p>Start your journey to the top of the leaderboard today</p>
+            <div class="cta-buttons">
+              <a href="../signup.html" class="btn-primary">Get Started</a>
+              <a href="./quizzes.html" class="btn-secondary">View Quizzes</a>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <!-- Footer -->
     <footer>
-      <div class="quick-links">
-        <a href="index.html">Home</a>
-        <a href="#quizzes">Quizzes</a>
-        <a href="#profile">Profile</a>
-        <span class="separator">|</span>
-        <a href="#terms">Terms</a>
-        <a href="#privacy">Privacy</a>
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <h2>EduPlus</h2>
+            <p>Empowering learners worldwide through interactive education</p>
+          </div>
+          <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./courses.html">Courses</a></li>
+              <li><a href="./quizzes.html">Quizzes</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h3>Resources</h3>
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+          <div class="footer-newsletter">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter for the latest updates</p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Enter your email" />
+              <button type="submit" class="btn-primary">Subscribe</button>
+            </form>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2024 EduPlus. All rights reserved.</p>
+          <div class="social-links">
+            <a href="#">Twitter</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+            <a href="#">Instagram</a>
+          </div>
+        </div>
       </div>
     </footer>
   </body>

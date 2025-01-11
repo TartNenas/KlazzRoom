@@ -1,141 +1,282 @@
-/* Leaderboard Specific Styles */
-.leaderboard-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2rem;
+/* Hero Section */
+.leaderboard-hero {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
 }
 
-/* Filters Section */
-.filters {
-  margin-bottom: 2rem;
-}
-
-.search-bar {
-  display: flex;
-  gap: 1rem;
+.hero-content h1 {
+  font-size: 3rem;
   margin-bottom: 1rem;
 }
 
-.search-bar input {
-  flex: 1;
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.hero-content p {
+  font-size: 1.25rem;
+  opacity: 0.9;
 }
 
-.filter-options {
+/* Student Leaderboard */
+.student-leaderboard {
+  padding: 4rem 0;
+  background: var(--background);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.leaderboard-filters {
   display: flex;
   gap: 1rem;
 }
 
-.filter-options select {
-  padding: 0.5rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
+.leaderboard-filters select {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  background: white;
 }
 
-/* Top Universities */
-.top-universities {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+/* Top Performers */
+.top-performers {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
   gap: 2rem;
   margin-bottom: 3rem;
 }
 
-.university-card {
-  position: relative;
+.performer-card {
+  background: white;
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 1rem;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 
-.gold {
-  background: linear-gradient(135deg, #ffd700, #ffecb3);
+.performer-card.gold {
+  padding-top: 3rem;
+  transform: scale(1.1);
 }
 
-.silver {
-  background: linear-gradient(135deg, #c0c0c0, #e6e6e6);
-}
-
-.bronze {
-  background: linear-gradient(135deg, #cd7f32, #deb887);
+.performer-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
 }
 
 .rank {
   position: absolute;
-  top: -10px;
-  left: -10px;
-  width: 30px;
-  height: 30px;
+  top: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--primary);
+  color: white;
   border-radius: 50%;
-  background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
 }
 
-.trend {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 0.9rem;
+/* Leaderboard Table */
+.leaderboard-table {
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.trend.up {
-  color: #28a745;
-}
-.trend.down {
-  color: #dc3545;
-}
-
-/* Rankings List */
-.university-row {
-  background: #fff;
-  margin-bottom: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 2fr 1fr 1fr;
+  padding: 1rem 2rem;
+  align-items: center;
 }
 
-.main-info {
+.table-header {
+  background: var(--surface);
+  font-weight: 500;
+}
+
+.table-row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.student-info {
   display: flex;
   align-items: center;
-  padding: 1rem;
+  gap: 1rem;
+}
+
+.student-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+/* How It Works */
+.how-it-works {
+  padding: 4rem 0;
+  background: var(--surface);
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
-.expand-btn {
-  margin-left: auto;
-  background: none;
-  border: none;
-  cursor: pointer;
+.step-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.student-contributors {
-  padding: 1rem;
-  background: #f8f9fa;
-  border-top: 1px solid #ddd;
+.step-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 
-.student {
+/* Rewards Section */
+.rewards-section {
+  padding: 4rem 0;
+  background: var(--background);
+}
+
+.rewards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.reward-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.reward-card img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.points-required {
+  color: var(--primary);
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+/* University Rankings */
+.university-rankings {
+  padding: 4rem 0;
+  background: var(--surface);
+}
+
+.university-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 1rem;
   display: flex;
-  justify-content: space-between;
-  padding: 0.5rem;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.university-card img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+/* CTA Section */
+.cta-section {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  padding: 4rem 0;
+  color: white;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .top-universities {
-    grid-template-columns: 1fr;
-  }
-
-  .filter-options {
+  .section-header {
     flex-direction: column;
+    gap: 1rem;
   }
 
-  .main-info {
-    flex-wrap: wrap;
+  .top-performers {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .performer-card.gold {
+    transform: none;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 0.5fr 1.5fr 1.5fr 1fr 1fr;
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+
+  .university-card {
+    flex-direction: column;
+    text-align: center;
     gap: 1rem;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .performer-card,
+  .step-card,
+  .reward-card,
+  .university-card,
+  .leaderboard-table {
+    background: var(--dark-surface);
+  }
+
+  .table-header {
+    background: var(--dark-surface-hover);
+  }
+
+  .table-row {
+    border-color: var(--dark-border);
+  }
+
+  .leaderboard-filters select {
+    background: var(--dark-surface);
+    color: var(--dark-text);
+    border-color: var(--dark-border);
   }
 }
