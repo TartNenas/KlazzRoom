@@ -1,12 +1,12 @@
 /* Base Layout */
 .lecturer-dashboard {
   position: relative;
-  padding-top: 90px; /* header height + some space */
+  padding-top: 120px; /* Increased padding to prevent overlap */
   min-height: 100vh;
   background: var(--background);
   padding-left: 2rem;
   padding-right: 2rem;
-  z-index: 1; /* Lower z-index than header */
+  z-index: 1;
 }
 
 /* Header & Navigation */
@@ -21,11 +21,9 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1000; /* Increased z-index */
+  z-index: 1000;
   height: 70px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
+  background: white; /* Solid background instead of transparent */
 }
 
 /* Logo */
@@ -260,7 +258,7 @@ nav a.active::after {
     top: 70px;
     left: 0;
     right: 0;
-    background: rgba(255, 255, 255, 0.95);
+    background: white; /* Solid background for mobile nav */
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(10px);
@@ -292,14 +290,16 @@ nav a.active::after {
   }
 
   .lecturer-dashboard {
-    padding: 90px 1rem 1rem 1rem;
+    padding-top: 100px; /* Slightly reduced padding for mobile */
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
 
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   header {
-    background: rgba(30, 30, 30, 0.95); /* Semi-transparent dark background */
+    background: var(--dark-surface); /* Solid dark background */
   }
 
   .notification-icon,
@@ -312,14 +312,12 @@ nav a.active::after {
   }
 
   nav {
-    background: rgba(30, 30, 30, 0.95);
+    background: var(--dark-surface);
   }
 
   @media (max-width: 768px) {
     nav {
-      background: rgba(255, 255, 255, 0.95);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
+      background: var(--dark-surface);
     }
 
     nav a.active {
