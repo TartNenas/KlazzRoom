@@ -1,10 +1,12 @@
 /* Base Layout */
 .lecturer-dashboard {
+  position: relative;
   padding-top: 90px; /* header height + some space */
   min-height: 100vh;
   background: var(--background);
   padding-left: 2rem;
   padding-right: 2rem;
+  z-index: 1; /* Lower z-index than header */
 }
 
 /* Header & Navigation */
@@ -19,8 +21,11 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 1000; /* Increased z-index */
   height: 70px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95); /* Semi-transparent background */
 }
 
 /* Logo */
@@ -255,9 +260,11 @@ nav a.active::after {
     top: 70px;
     left: 0;
     right: 0;
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     padding: 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   nav.active {
@@ -292,7 +299,7 @@ nav a.active::after {
 /* Dark Mode Support */
 @media (prefers-color-scheme: dark) {
   header {
-    background: var(--dark-surface);
+    background: rgba(30, 30, 30, 0.95); /* Semi-transparent dark background */
   }
 
   .notification-icon,
@@ -304,9 +311,15 @@ nav a.active::after {
     background: var(--dark-text);
   }
 
+  nav {
+    background: rgba(30, 30, 30, 0.95);
+  }
+
   @media (max-width: 768px) {
     nav {
-      background: var(--dark-surface);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
 
     nav a.active {
