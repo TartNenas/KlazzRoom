@@ -3,10 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add New Course - EduPlus</title>
+    <title>Manage Courses - Lecturer Dashboard</title>
     <link rel="stylesheet" href="../Assets/css/styles.css" />
     <link rel="stylesheet" href="../Assets/css/lecturer-styles.css" />
-    <link rel="stylesheet" href="../Assets/css/lecturer-courses.css" />
   </head>
   <body>
     <!-- Navbar -->
@@ -14,23 +13,15 @@
       <div class="logo">
         <h1>EduPlus</h1>
       </div>
-
-      <button class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-
       <nav>
         <ul>
           <li><a href="./index.html">Dashboard</a></li>
-          <li><a href="./courses.html">My Courses</a></li>
+          <li><a href="./courses.html" class="active">Courses</a></li>
           <li><a href="./quizzes.html">Quizzes</a></li>
-          <li><a href="./jobs.html">Freelance Jobs</a></li>
-          <li><a href="./profile.html">Profile</a></li>
+          <li><a href="./students.html">Students</a></li>
+          <li><a href="./analytics.html">Analytics</a></li>
         </ul>
       </nav>
-
       <div class="user-actions">
         <a href="#notifications" class="notification-icon">🔔</a>
         <a href="#profile" class="profile-icon">👤</a>
@@ -38,157 +29,113 @@
     </header>
 
     <main class="lecturer-dashboard">
-      <!-- Header Section -->
+      <!-- Page Header -->
       <section class="page-header">
         <div class="header-content">
-          <h1>Create New Course</h1>
-          <p>Design and structure your new educational course</p>
+          <div class="title-section">
+            <h1>Manage Courses</h1>
+            <p>Create and manage your courses</p>
+          </div>
+          <button class="btn-primary create-course-btn">
+            <span>+</span> Create New Course
+          </button>
         </div>
       </section>
 
-      <!-- Course Creation Form -->
-      <section class="course-creation">
-        <!-- Course Header Section -->
-        <div class="form-section">
-          <h2>Course Overview</h2>
-          <div class="form-group">
-            <label for="courseTitle">Course Title</label>
-            <input
-              type="text"
-              id="courseTitle"
-              placeholder="e.g., Advanced Web Development"
-            />
-          </div>
-          <div class="form-group">
-            <label for="courseSubtitle">Course Subtitle</label>
-            <input
-              type="text"
-              id="courseSubtitle"
-              placeholder="e.g., Master Modern Web Technologies"
-            />
-          </div>
-          <div class="form-group">
-            <label for="courseDescription">Course Description</label>
-            <textarea
-              id="courseDescription"
-              rows="4"
-              placeholder="Provide a detailed overview of your course..."
-            ></textarea>
-          </div>
-        </div>
-
-        <!-- Course Content Section -->
-        <div class="form-section">
-          <h2>Course Content</h2>
-          <div class="module-builder">
-            <div class="module-item">
-              <div class="module-header">
-                <h3>Module 1</h3>
-                <div class="module-actions">
-                  <button class="icon-btn">📝</button>
-                  <button class="icon-btn">❌</button>
-                </div>
-              </div>
-              <div class="lesson-list">
-                <div class="lesson-item">
-                  <input type="text" placeholder="Lesson title" />
-                  <select>
-                    <option value="video">Video</option>
-                    <option value="quiz">Quiz</option>
-                    <option value="assignment">Assignment</option>
-                  </select>
-                  <button class="icon-btn">❌</button>
-                </div>
-                <button class="add-lesson-btn">+ Add Lesson</button>
-              </div>
+      <!-- Course Management -->
+      <section class="course-management">
+        <div class="management-header">
+          <div class="search-filters">
+            <div class="search-bar">
+              <input type="text" placeholder="Search courses..." />
+              <button>🔍</button>
             </div>
-            <button class="add-module-btn">+ Add New Module</button>
-          </div>
-        </div>
-
-        <!-- Timeline Section -->
-        <div class="form-section">
-          <h2>Course Schedule</h2>
-          <div class="timeline-builder">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="startDate">Start Date</label>
-                <input type="date" id="startDate" />
-              </div>
-              <div class="form-group">
-                <label for="duration">Duration (weeks)</label>
-                <input type="number" id="duration" min="1" />
-              </div>
-            </div>
-            <div class="milestone-list">
-              <div class="milestone-item">
-                <input type="text" placeholder="Milestone title" />
-                <input type="date" />
-                <button class="icon-btn">❌</button>
-              </div>
-              <button class="add-milestone-btn">+ Add Milestone</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course Settings -->
-        <div class="form-section">
-          <h2>Course Settings</h2>
-          <div class="settings-grid">
-            <div class="form-group">
-              <label for="category">Category</label>
-              <select id="category">
-                <option value="web">Web Development</option>
-                <option value="data">Data Science</option>
-                <option value="design">Design</option>
+            <div class="filters">
+              <select class="status-filter">
+                <option value="all">All Status</option>
+                <option value="active">Active</option>
+                <option value="draft">Draft</option>
+                <option value="archived">Archived</option>
+              </select>
+              <select class="sort-filter">
+                <option value="recent">Most Recent</option>
+                <option value="students">Most Students</option>
+                <option value="rating">Highest Rated</option>
               </select>
             </div>
-            <div class="form-group">
-              <label for="level">Difficulty Level</label>
-              <select id="level">
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="prerequisites">Prerequisites</label>
-              <input
-                type="text"
-                id="prerequisites"
-                placeholder="Required skills or courses"
+          </div>
+          <div class="view-toggle">
+            <button class="active">Grid</button>
+            <button>List</button>
+          </div>
+        </div>
+
+        <!-- Course Grid -->
+        <div class="course-grid">
+          <div class="course-card">
+            <div class="course-header">
+              <img
+                src="../Assets/images/courses/web-dev.jpg"
+                alt="Web Development"
               />
+              <span class="status active">Active</span>
+              <div class="quick-actions">
+                <button class="action-btn">⋮</button>
+                <div class="action-menu">
+                  <a href="#">Edit Course</a>
+                  <a href="#">View Analytics</a>
+                  <a href="#">Archive</a>
+                  <a href="#" class="delete">Delete</a>
+                </div>
+              </div>
             </div>
-            <div class="form-group">
-              <label for="maxStudents">Maximum Students</label>
-              <input type="number" id="maxStudents" min="1" />
+            <div class="course-content">
+              <h3>Modern Web Development</h3>
+              <p>Full-stack development with modern technologies</p>
+              <div class="course-stats">
+                <span>👥 125 Students</span>
+                <span>⭐ 4.8</span>
+                <span>📝 15 Modules</span>
+              </div>
+              <div class="progress-info">
+                <div class="progress-bar">
+                  <div class="progress" style="width: 85%"></div>
+                </div>
+                <span>85% Completion Rate</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <!-- CTA Section -->
-        <div class="form-actions">
-          <button class="secondary-btn">Save as Draft</button>
-          <button class="primary-btn">Publish Course</button>
+          <!-- More course cards... -->
+        </div>
+      </section>
+
+      <!-- Course Analytics Overview -->
+      <section class="analytics-overview">
+        <h2>Quick Analytics</h2>
+        <div class="analytics-grid">
+          <div class="stat-card">
+            <h3>Total Students</h3>
+            <p class="stat-number">1,250</p>
+            <span class="trend up">↑ 12% this month</span>
+          </div>
+          <div class="stat-card">
+            <h3>Average Rating</h3>
+            <p class="stat-number">4.8</p>
+            <span class="trend up">↑ 0.3 this month</span>
+          </div>
+          <div class="stat-card">
+            <h3>Completion Rate</h3>
+            <p class="stat-number">78%</p>
+            <span class="trend down">↓ 3% this month</span>
+          </div>
+          <div class="stat-card">
+            <h3>Active Courses</h3>
+            <p class="stat-number">8</p>
+            <span class="trend neutral">No change</span>
+          </div>
         </div>
       </section>
     </main>
-
-    <script>
-      const hamburger = document.querySelector(".hamburger");
-      const nav = document.querySelector("nav");
-
-      hamburger.addEventListener("click", () => {
-        hamburger.classList.toggle("active");
-        nav.classList.toggle("active");
-      });
-
-      document.querySelectorAll("nav a").forEach((link) => {
-        link.addEventListener("click", () => {
-          hamburger.classList.remove("active");
-          nav.classList.remove("active");
-        });
-      });
-    </script>
   </body>
 </html>
