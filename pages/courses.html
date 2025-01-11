@@ -51,16 +51,17 @@
             <div class="course-filters">
               <select class="category-filter">
                 <option value="all">All Categories</option>
-                <option value="technology">Technology</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="engineering">Engineering</option>
                 <option value="business">Business</option>
-                <option value="design">Design</option>
                 <option value="science">Science</option>
               </select>
-              <select class="level-filter">
-                <option value="all">All Levels</option>
-                <option value="beginner">Beginner</option>
-                <option value="intermediate">Intermediate</option>
-                <option value="advanced">Advanced</option>
+              <select class="university-filter">
+                <option value="all">All Universities</option>
+                <option value="utm">UTM</option>
+                <option value="um">UM</option>
+                <option value="usm">USM</option>
+                <option value="upm">UPM</option>
               </select>
             </div>
           </div>
@@ -69,29 +70,37 @@
             <div class="course-card">
               <div class="course-image">
                 <img
-                  src="../Assets/images/courses/web-dev.jpg"
-                  alt="Web Development"
+                  src="../Assets/images/courses/data-science.jpg"
+                  alt="Data Science"
                 />
-                <span class="course-level">Intermediate</span>
+                <span class="course-level advanced">Advanced</span>
+                <div class="course-overlay">
+                  <span class="rating">⭐ 4.9</span>
+                  <span class="students">12.5K students</span>
+                </div>
               </div>
               <div class="course-content">
-                <span class="university"
-                  >Universiti Teknologi Malaysia (UTM)</span
-                >
-                <h3>Modern Web Development</h3>
-                <p>Learn full-stack development with modern technologies</p>
-                <div class="course-meta">
-                  <span>⭐ 4.8 (2.3k reviews)</span>
-                  <span>👥 12,500 students</span>
+                <div class="course-tags">
+                  <span class="tag">Data Science</span>
+                  <span class="tag">Python</span>
+                </div>
+                <h3>Data Science & Analytics</h3>
+                <p>Master data analysis with Python and Machine Learning</p>
+                <div class="university-info">
+                  <img src="../Assets/images/universities/utm.svg" alt="UTM" />
+                  <span>Universiti Teknologi Malaysia</span>
                 </div>
                 <div class="course-footer">
-                  <span class="price">RM 199</span>
-                  <a href="#" class="btn-secondary">Learn More</a>
+                  <div class="price-info">
+                    <span class="price">RM 199</span>
+                    <span class="original-price">RM 299</span>
+                  </div>
+                  <button class="enroll-btn">Enroll Now</button>
                 </div>
               </div>
             </div>
 
-            <!-- More course cards... -->
+            <!-- Similar structure for other course cards -->
           </div>
         </div>
       </section>
