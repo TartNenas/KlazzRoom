@@ -36,137 +36,75 @@
       </div>
     </header>
 
-    <main class="lecturer-dashboard">
-      <!-- Hero Header Section -->
-      <section class="welcome-section">
-        <div class="welcome-content">
+    <main class="dashboard-container">
+      <!-- Welcome Stats Card -->
+      <section class="welcome-stats-card">
+        <div class="welcome-header">
           <h1>Welcome Back, Dr. Smith</h1>
           <p>Manage your courses, create quizzes, and track student progress</p>
         </div>
-        <div class="quick-stats">
-          <div class="stat-card">
-            <h3>450</h3>
-            <p>Active Students</p>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number">450</div>
+            <div class="stat-label">Active Students</div>
           </div>
-          <div class="stat-card">
-            <h3>8</h3>
-            <p>Active Courses</p>
+          <div class="stat-item">
+            <div class="stat-number">8</div>
+            <div class="stat-label">Active Courses</div>
           </div>
-          <div class="stat-card">
-            <h3>25</h3>
-            <p>Quizzes Created</p>
+          <div class="stat-item">
+            <div class="stat-number">25</div>
+            <div class="stat-label">Quizzes Created</div>
           </div>
         </div>
       </section>
 
-      <!-- Features List Section -->
-      <section class="features-section">
-        <h2>Quick Actions</h2>
-        <div class="features-grid">
-          <a href="./courses/create.html" class="feature-card">
-            <span class="feature-icon">📚</span>
-            <h3>Create New Course</h3>
-            <p>Design and publish a new course module</p>
+      <!-- Quick Actions -->
+      <section class="quick-actions">
+        <h2 class="section-title">Quick Actions</h2>
+        <div class="actions-grid">
+          <a href="./courses/new" class="action-link">
+            <div class="action-card">
+              <div class="action-icon">📚</div>
+              <div class="action-content">
+                <h3>Create New Course</h3>
+                <p>Design and publish a new course module</p>
+              </div>
+            </div>
           </a>
-          <a href="./quizzes/create.html" class="feature-card">
-            <span class="feature-icon">📝</span>
-            <h3>Create Quiz</h3>
-            <p>Add new assessments for your students</p>
+
+          <a href="./quizzes/new" class="action-link">
+            <div class="action-card">
+              <div class="action-icon">📝</div>
+              <div class="action-content">
+                <h3>Create Quiz</h3>
+                <p>Add new assessments for your students</p>
+              </div>
+            </div>
           </a>
-          <a href="./students/grades.html" class="feature-card">
-            <span class="feature-icon">📊</span>
-            <h3>Grade Submissions</h3>
-            <p>Review and grade student submissions</p>
+
+          <a href="./submissions" class="action-link">
+            <div class="action-card">
+              <div class="action-icon">📊</div>
+              <div class="action-content">
+                <h3>Grade Submissions</h3>
+                <p>Review and grade student submissions</p>
+              </div>
+            </div>
           </a>
-          <a href="./analytics.html" class="feature-card">
-            <span class="feature-icon">📈</span>
-            <h3>View Analytics</h3>
-            <p>Track student performance and engagement</p>
+
+          <a href="./analytics" class="action-link">
+            <div class="action-card">
+              <div class="action-icon">📈</div>
+              <div class="action-content">
+                <h3>View Analytics</h3>
+                <p>Track student performance and engagement</p>
+              </div>
+            </div>
           </a>
         </div>
       </section>
-
-      <!-- About Section -->
-      <section class="recent-activity">
-        <h2>Recent Activity</h2>
-        <div class="activity-list">
-          <div class="activity-item">
-            <span class="activity-icon">📝</span>
-            <div class="activity-content">
-              <h4>New Quiz Submissions</h4>
-              <p>15 students completed JavaScript Basics Quiz</p>
-              <span class="activity-time">2 hours ago</span>
-            </div>
-            <a href="#review" class="action-btn">Review</a>
-          </div>
-          <div class="activity-item">
-            <span class="activity-icon">❓</span>
-            <div class="activity-content">
-              <h4>Student Questions</h4>
-              <p>3 new questions in Web Development course</p>
-              <span class="activity-time">5 hours ago</span>
-            </div>
-            <a href="#answer" class="action-btn">Answer</a>
-          </div>
-        </div>
-      </section>
-
-      <!-- Services Section -->
-      <section class="course-overview">
-        <h2>Active Courses</h2>
-        <div class="courses-grid">
-          <div class="course-card">
-            <div class="course-header">
-              <h3>Web Development Basics</h3>
-              <span class="student-count">125 Students</span>
-            </div>
-            <div class="course-stats">
-              <div class="stat">
-                <span>Average Score</span>
-                <strong>85%</strong>
-              </div>
-              <div class="stat">
-                <span>Completion Rate</span>
-                <strong>78%</strong>
-              </div>
-            </div>
-            <a href="./courses/details.html" class="view-details"
-              >View Details</a
-            >
-          </div>
-
-          <div class="course-card">
-            <div class="course-header">
-              <h3>Data Science Fundamentals</h3>
-              <span class="student-count">98 Students</span>
-            </div>
-            <div class="course-stats">
-              <div class="stat">
-                <span>Average Score</span>
-                <strong>79%</strong>
-              </div>
-              <div class="stat">
-                <span>Completion Rate</span>
-                <strong>65%</strong>
-              </div>
-            </div>
-            <a href="./courses/details.html" class="view-details"
-              >View Details</a
-            >
-          </div>
-        </div>
-      </section>
-
-      <!-- Footer -->
-      <footer>
-        <div class="footer-content">
-          <div class="quick-links">
-            <a href="#help">Help Center</a>
-            <a href="#resources">Teaching Resources</a>
-            <a href="#support">Technical Support</a>
-          </div>
-        </div>
-      </footer>
     </main>
 
     <script>
